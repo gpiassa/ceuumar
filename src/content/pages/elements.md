@@ -133,7 +133,7 @@ window.addEventListener("load", (e) => {
 
 ### Button
 
-<Button label="Button" link="#" style="solid"/>
+<Button label="Button" link="#" style="solid":>
 
 ---
 

@@ -1,11 +1,12 @@
 import MDXContent from "@/components/MDXContent";
-import { getSinglePage } from "@/lib/contentParser";
+import {getSinglePage} from "@/lib/contentParser";
 import PageHeader from "@/partials/PageHeader";
 import SeoMeta from "@/partials/SeoMeta";
-import { RegularPage } from "types";
+import {RegularPage} from "types";
 
 // remove dynamicParams
-export const dynamicParams = false;
+export let dynamicParams: boolean;
+dynamicParams = false;
 
 // generate static params
 export const generateStaticParams = () => {
@@ -15,21 +16,19 @@ export const generateStaticParams = () => {
     (page: RegularPage) => !page.frontmatter.layout
   );
 
-  const regularPages = filterRegularPages.map((page: RegularPage) => ({
+  return filterRegularPages.map((page: RegularPage) => ({
     regular: page.slug,
   }));
-
-  return regularPages;
 };
 
 // for all regular pages
-const RegularPages = ({ params }: { params: { regular: string } }) => {
+const RegularPages = ({params}: { params: { regular: string } }) => {
   const regularData = getSinglePage("pages");
   const data = regularData.filter(
     (page: RegularPage) => page.slug === params.regular
   )[0];
-  const { frontmatter, content } = data;
-  const { title, meta_title, description, image } = frontmatter;
+  const {frontmatter, content} = data;
+  const {title, meta_title, description, image} = frontmatter;
 
   return (
     <>
@@ -39,11 +38,11 @@ const RegularPages = ({ params }: { params: { regular: string } }) => {
         description={description}
         image={image}
       />
-      <PageHeader title={title} />
+      <PageHeader title={title}/>
       <section className="section">
         <div className="container">
           <div className="content">
-            <MDXContent content={content} />
+            <MDXContent content={content}/>
           </div>
         </div>
       </section>
