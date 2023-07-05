@@ -131,12 +131,6 @@ window.addEventListener("load", (e) => {
 
 ---
 
-### Button
-
-<Button label="Button" link="#" style="solid":>
-
----
-
 ### Quote
 
 > Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once.
