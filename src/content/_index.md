@@ -1,7 +1,7 @@
 ---
 # Banner
 banner:
-  title: "Centro Espírita Universalista de Maringá"
+  title: "Centro Espírita Umbandista Universalista de Maringá"
   content: "Nextplate is a free starter template built with Next and TailwindCSS, providing everything you need to jumpstart your Next project and save valuable time."
   image: "/images/img.png"
   button:
