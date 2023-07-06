@@ -113,6 +113,7 @@ const Home = () => {
                   <a
                     className="btn btn-primary mt-5"
                     href={feature.button.link}
+                    target={"_blank"}
                   >
                     {feature.button.label}
                   </a>
