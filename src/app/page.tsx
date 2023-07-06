@@ -16,7 +16,8 @@ const Home = () => {
     banner,
     features,
   }: {
-    banner: { title: string; image: string; content?: string; button?: Button };
+    banner: {
+      title: string; image: string; content?: string; button?: Button; logo: string };
     features: Feature[];
   } = frontmatter;
 
@@ -27,6 +28,17 @@ const Home = () => {
         <div className="container">
           <div className="row justify-center">
             <div className="mb-16 text-center lg:col-7">
+              {banner.logo && (
+                <div className="row justify-center">
+                  <ImageFallback
+                    src={banner.logo}
+                    width="636"
+                    height="198"
+                    alt="logo image"
+                    priority
+                  />
+                </div>
+              )}
               <h1
                 className="mb-4"
                 dangerouslySetInnerHTML={markdownify(banner.title)}
@@ -56,6 +68,7 @@ const Home = () => {
         </div>
       </section>
 
+      <Testimonials data={testimonial} />
       {features.map((feature, index: number) => (
         <section
           key={index}
@@ -110,7 +123,6 @@ const Home = () => {
         </section>
       ))}
 
-      <Testimonials data={testimonial} />
       <CallToAction data={callToAction} />
     </>
   );

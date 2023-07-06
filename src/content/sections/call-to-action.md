@@ -1,10 +1,10 @@
 ---
 enable: true
-title: "Ready to build your next project with Next?"
+title: "Venha nos conhecer"
 image: "/images/call-to-action.png"
-description: "Experience the future of web development with Nextplate and Next. Build lightning-fast static sites with ease and flexibility."
+description: "Nossos atendimentos são às terças com início às 19:30. Dá pra escrever uma ruma de coisa aqui, e tem como inserir mais sessões na página inicial, só sei o que vamos colocar a mais."
 button:
   enable: true
-  label: "Get Started Now"
-  link: "https://github.com/zeon-studio/nextplate"
+  label: "Onde estamos?"
+  link: "https://goo.gl/maps/X7WufmmXPJ7vPLPH6"
 ---
