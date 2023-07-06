@@ -4,7 +4,7 @@ banner:
   logo: "/images/favicon.png"
   title: "Centro Espírita Umbandista Universalista de Maringá"
   content: "O nome de Umbanda, que foi dado a um vigoroso movimento de luz, ordenado pelo Astral Superior, através dos Caboclos e Pretos Velhos, é termo litúrgico, sagrado, vibrado, que significa num sentido mais profundo, o conjunto das leis de Deus."
-  image: "/images/banner.png"
+  image: "/images/guias.png"
   button:
     enable: false
     label: "Get Started For Free"
@@ -13,7 +13,7 @@ banner:
 # Features
 features:
   - title: "História da Umbanda"
-    image: "/images/guias.png"
+    image: "/images/banner.png"
     content: "Ajudem a escrever essa sessão, por favor, pensei em pegar da nossa apostila/curso algumas citações"
     bulletpoints:
       - "Dá pra fazer isso"

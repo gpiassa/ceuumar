@@ -28,17 +28,6 @@ const Home = () => {
         <div className="container">
           <div className="row justify-center">
             <div className="mb-16 text-center lg:col-7">
-              {banner.logo && (
-                <div className="row justify-center">
-                  <ImageFallback
-                    src={banner.logo}
-                    width="636"
-                    height="198"
-                    alt="logo image"
-                    priority
-                  />
-                </div>
-              )}
               <h1
                 className="mb-4"
                 dangerouslySetInnerHTML={markdownify(banner.title)}
