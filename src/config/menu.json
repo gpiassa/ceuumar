@@ -1,45 +1,33 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "A Umbanda",
       "url": "/"
     },
     {
-      "name": "About",
+      "name": "Sobre Nós",
       "url": "/about"
     },
     {
-      "name": "Elements",
+      "name": "Apometria",
       "url": "/elements"
     },
     {
-      "name": "Pages",
+      "name": "Atendimentos",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Contact",
+          "name": "Pretos Velhos",
           "url": "/contact"
         },
         {
-          "name": "Blog",
+          "name": "Apometria",
           "url": "/blog"
         },
         {
-          "name": "Authors",
+          "name": "Linha de Esquerda",
           "url": "/authors"
-        },
-        {
-          "name": "Categories",
-          "url": "/categories"
-        },
-        {
-          "name": "Search",
-          "url": "/search"
-        },
-        {
-          "name": "404 Page",
-          "url": "/404"
         }
       ]
     }
