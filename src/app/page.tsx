@@ -57,7 +57,6 @@ const Home = () => {
         </div>
       </section>
 
-      <Testimonials data={testimonial} />
       {features.map((feature, index: number) => (
         <section
           key={index}
@@ -112,6 +111,7 @@ const Home = () => {
           </div>
         </section>
       ))}
+      <Testimonials data={testimonial} />
 
       <CallToAction data={callToAction} />
     </>
