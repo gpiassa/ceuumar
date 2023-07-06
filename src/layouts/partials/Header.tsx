@@ -1,13 +1,13 @@
 "use client";
 
-import Logo from "@/components/Logo";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
+// import Logo from "@/components/Logo";
+// import ThemeSwitcher from "@/components/ThemeSwitcher";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { IoSearch } from "react-icons/io5/index.js";
+// import { IoSearch } from "react-icons/io5/index.js";
 
 export interface ChildNavigationLink {
   name: string;
@@ -35,14 +35,13 @@ const Header = () => {
       <nav className="navbar container">
         {/* logo */}
         <div className="order-0">
-          <Logo />
         </div>
         {/* navbar toggler */}
         <input id="nav-toggle" type="checkbox" className="hidden" />
         <label
           id="show-button"
           htmlFor="nav-toggle"
-          className="order-3 flex cursor-pointer items-center text-dark dark:text-white lg:order-1 lg:hidden"
+          className="order-3 flex cursor-pointer items-center text-dark  lg:order-1 lg:hidden"
         >
           <svg className="h-6 fill-current" viewBox="0 0 20 20">
             <title>Menu Open</title>
@@ -52,7 +51,7 @@ const Header = () => {
         <label
           id="hide-button"
           htmlFor="nav-toggle"
-          className="order-3 hidden cursor-pointer items-center text-dark dark:text-white lg:order-1"
+          className="order-3 hidden cursor-pointer items-center text-dark  lg:order-1"
         >
           <svg className="h-6 fill-current" viewBox="0 0 20 20">
             <title>Menu Close</title>
@@ -131,24 +130,24 @@ const Header = () => {
           )}
         </ul>
         <div className="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
-          {settings.search && (
-            <Link
-              className="mr-5 inline-block border-r border-border pr-5 text-xl text-dark hover:text-primary dark:border-darkmode-border dark:text-white"
-              href="/search"
-              aria-label="search"
-            >
-              <IoSearch />
-            </Link>
-          )}
-          <ThemeSwitcher className="mr-5" />
-          {navigation_button.enable && (
-            <Link
-              className="btn btn-outline-primary btn-sm hidden lg:inline-block"
-              href={navigation_button.link}
-            >
-              {navigation_button.label}
-            </Link>
-          )}
+          {/*{settings.search && (*/}
+          {/*  <Link*/}
+          {/*    className="mr-5 inline-block border-r border-border pr-5 text-xl text-dark hover:text-primary  "*/}
+          {/*    href="/search"*/}
+          {/*    aria-label="search"*/}
+          {/*  >*/}
+          {/*    <IoSearch />*/}
+          {/*  </Link>*/}
+          {/*)}*/}
+          {/*<ThemeSwitcher className="mr-5" />*/}
+          {/*{navigation_button.enable && (*/}
+          {/*  <Link*/}
+          {/*    className="btn btn-outline-primary btn-sm hidden lg:inline-block"*/}
+          {/*    href={navigation_button.link}*/}
+          {/*  >*/}
+          {/*    {navigation_button.label}*/}
+          {/*  </Link>*/}
+          {/*)}*/}
         </div>
       </nav>
     </header>

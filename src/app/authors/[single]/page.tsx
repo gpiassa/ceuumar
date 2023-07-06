@@ -3,23 +3,21 @@ import ImageFallback from "@/components/ImageFallback";
 import MDXContent from "@/components/MDXContent";
 import Social from "@/components/Social";
 import config from "@/config/config.json";
-import { getSinglePage } from "@/lib/contentParser";
-import { slugify } from "@/lib/utils/textConverter";
+import {getSinglePage} from "@/lib/contentParser";
+import {slugify} from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
-import { Author, Post } from "types";
+import {Author, Post} from "types";
 
 // remove dynamicParams
-export const dynamicParams = false;
+// export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams: () => { single?: string }[] = () => {
   const authors: Author[] = getSinglePage("authors");
 
-  const paths = authors.map((author) => ({
+  return authors.map((author) => ({
     single: author.slug,
   }));
-
-  return paths;
 };
 
 const AuthorSingle = ({ params }: { params: { single: string } }) => {
@@ -43,7 +41,7 @@ const AuthorSingle = ({ params }: { params: { single: string } }) => {
       />
       <section className="section-sm pb-0">
         <div className="container">
-          <div className="row justify-center border-b border-border pb-14 dark:border-darkmode-border">
+          <div className="row justify-center border-b border-border pb-14 ">
             <div className="text-center lg:col-4">
               {image && (
                 <ImageFallback

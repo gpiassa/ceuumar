@@ -2,10 +2,10 @@
 # Banner
 banner:
   title: "Centro Espírita Umbandista Universalista de Maringá"
-  content: "Nextplate is a free starter template built with Next and TailwindCSS, providing everything you need to jumpstart your Next project and save valuable time."
+  content: "O nome de Umbanda, que foi dado a um vigoroso movimento de luz, ordenado pelo Astral Superior, através dos Caboclos e Pretos Velhos, é termo litúrgico, sagrado, vibrado, que significa num sentido mais profundo, o conjunto das leis de Deus."
   image: "/images/img.png"
   button:
-    enable: true
+    enable: false
     label: "Get Started For Free"
     link: "https://github.com/zeon-studio/nextplate"
 
@@ -34,7 +34,7 @@ features:
       - "Customizable: Tailwind, MDX, and 100+ other integrations to choose from."
       - "UI-agnostic: Supports React, Preact, Svelte, Vue, Solid, Lit and more."
     button:
-      enable: true
+      enable: false
       label: "Get Started Now"
       link: "https://github.com/zeon-studio/nextplate"
 

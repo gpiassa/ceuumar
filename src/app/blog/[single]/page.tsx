@@ -4,33 +4,27 @@ import ImageFallback from "@/components/ImageFallback";
 import MDXContent from "@/components/MDXContent";
 import Share from "@/components/Share";
 import config from "@/config/config.json";
-import { getSinglePage } from "@/lib/contentParser";
+import {getSinglePage} from "@/lib/contentParser";
 import dateFormat from "@/lib/utils/dateFormat";
 import similerItems from "@/lib/utils/similarItems";
-import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
+import {humanize, markdownify, slugify} from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
 import Link from "next/link";
-import {
-  FaRegClock,
-  FaRegFolder,
-  FaRegUserCircle,
-} from "react-icons/fa/index.js";
-import { Post } from "types";
+import {FaRegClock, FaRegFolder, FaRegUserCircle,} from "react-icons/fa/index.js";
+import {Post} from "types";
 
 const { blog_folder } = config.settings;
 
 // remove dynamicParams
-export const dynamicParams = false;
+// export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams: () => { single: string }[] = () => {
   const posts: Post[] = getSinglePage(blog_folder);
 
-  const paths = posts.map((post) => ({
+  return posts.map((post) => ({
     single: post.slug!,
   }));
-
-  return paths;
 };
 
 const PostSingle = ({ params }: { params: { single: string } }) => {
@@ -113,7 +107,7 @@ const PostSingle = ({ params }: { params: { single: string } }) => {
                     {tags?.map((tag: string) => (
                       <li key={tag} className="inline-block">
                         <Link
-                          className="m-1 block rounded bg-theme-light px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-theme-light dark:hover:bg-darkmode-primary dark:hover:text-dark"
+                          className="m-1 block rounded bg-theme-light px-3 py-1 hover:bg-primary hover:text-white   "
                           href={`/tags/${slugify(tag)}`}
                         >
                           {humanize(tag)}

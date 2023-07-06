@@ -1,13 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 
-const rootDirs = ["src/app", "src/hooks", "src/layouts", "src/styles"];
+const rootDirs = ["/home/gustavopiassa/Portifolio/ceuumar/src/app", "/home/gustavopiassa/Portifolio/ceuumar/src/hooks", "/home/gustavopiassa/Portifolio/ceuumar/src/layouts", "/home/gustavopiassa/Portifolio/ceuumar/src/styles"];
 const configFiles = [
   {
-    filePath: "tailwind.config.js",
+    filePath: "/home/gustavopiassa/Portifolio/ceuumar/tailwind.config.js",
     patterns: ["darkmode:\\s*{[^}]*},", 'darkMode:\\s*"class",'],
   },
-  { filePath: "src/config/theme.json", patterns: ["colors.darkmode"] },
+  { filePath: "/home/gustavopiassa/Portifolio/ceuumar/src/config/theme.json", patterns: ["colors.darkmode"] },
 ];
 
 rootDirs.forEach(removeDarkModeFromPages);
@@ -40,7 +40,7 @@ function removeDarkModeFromPages(directoryPath) {
 
 function removeDarkMode(configFile) {
   const { filePath, patterns } = configFile;
-  if (filePath === "tailwind.config.js") {
+  if (filePath === "/home/gustavopiassa/Portifolio/ceuumar/tailwind.config.js") {
     removeDarkModeFromFiles(filePath, patterns);
   } else {
     const contentFile = JSON.parse(fs.readFileSync(filePath, "utf8"));
